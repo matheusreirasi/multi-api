@@ -1,0 +1,10 @@
+1- Na linha 14 do arquivo Login.tsx eu usei interrogação depois do current para dizer que é opcional. Se eu deixar sem isso ele me retorna o erro de que userRef é provavelmente null
+
+2- Outro erro que deu no arquivo Login.tsx foi no userRef onde eu tive que dizer um tipo para ele e também colocar um tipo padrão que é null. Se eu não colocasse nada seu tipo padrão seria undefined e isso não será permitido já que ele é usado como referência no input do form e aparentemente o tipo HTMLInputElement só aceita o tipo null.
+
+3- Sempre que eu usar ou criar uma tag HTML eu tenho que usar extensão .tsx . Estava dando erro no arquivo AuthProvider pq eu estava usando extensão .ts para criar a tag de Provider e me retornava o erro Cannot find namespace 'AuthContext' quando eu deixava o ponteiro encima do AuthContext e também considerava o resto dos parâmetros do contexto como uma Regex
+
+4- https://www.youtube.com/watch?v=X3qyxo_UTR4&list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd&index=6&t=1212s
+Neste vídeo ele criou o provider simplesmente com Javascript, o ideal é fazer com jsx ou tsx.
+
+5- Antes browser router estava fora de AuthProvider, talvez seja por isso que o context que eu criei não estava funcionando direito
